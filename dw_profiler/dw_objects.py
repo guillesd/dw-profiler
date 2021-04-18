@@ -10,8 +10,12 @@ class Column:
 class Table:
     name: str 
     columns: List[Column]
-    size: float 
+    size: float
     nrows: int 
+
+    @property 
+    def size_gb(self):
+        return self.size / 1024 / 1024 / 1024
 
 @dataclass(frozen=True)
 class Schema:
@@ -22,3 +26,6 @@ class Schema:
 class DataWarehouse:
     name: str 
     schemas: List[Schema]
+    region: str
+
+
