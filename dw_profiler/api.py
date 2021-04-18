@@ -1,4 +1,4 @@
-from bigquery.metadata_collector import BQMetadataCollector
+from dw_profiler.bigquery.metadata_collector import BQMetadataCollector
 
 class MetadataCollector:
     """ 
@@ -10,7 +10,7 @@ class MetadataCollector:
         if warehouse_type == 'bigquery':
             if credentials == None:
                 raise Exception("Missing credentials")
-            elif region = None:
+            elif region == None:
                 raise Exception("Rigion was not specified")
             else:
                 self.metadata_collector = BQMetadataCollector(warehouse_name, credentials, region)
