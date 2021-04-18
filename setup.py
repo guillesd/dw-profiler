@@ -13,7 +13,6 @@ setup(
         'google-api-core>=1.16.0,<2',
         'googleapis-common-protos>=1.6.0,<2'
     ],
-    package_dir={"": "dw_profiler"},
     packages=find_packages(),
     python_requires=">=3.7.0",
 )
