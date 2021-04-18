@@ -1,8 +1,8 @@
-from setuptools import setup
+from setuptools import setup, find_packages
 
 setup(
-    name=dw_profiler,
-    version=0.1.0,
+    name="dw_profiler",
+    version="0.1.0",
     description="Tool to profile data warehouses",
     author="Guillermo Sanchez Dionis",
     author_email="gsdionis@gmail.com",
@@ -13,5 +13,7 @@ setup(
         'google-api-core>=1.16.0,<2',
         'googleapis-common-protos>=1.6.0,<2'
     ],
+    package_dir={"": "dw_profiler"},
+    packages=find_packages(where="dw_profiler"),
     python_requires=">=3.7.0",
 )
