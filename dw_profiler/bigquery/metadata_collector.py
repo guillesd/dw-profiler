@@ -1,4 +1,4 @@
-from cloud.google import bigquery 
+from google.cloud import bigquery 
 
 class BQMetadataCollector:
     def __init__(self, warehouse_name: str, credentials: str, region: str):
@@ -8,6 +8,6 @@ class BQMetadataCollector:
 
     def _set_api_connection(self):
         self.client = bigquery.Client(
-            project=self.warehosue_name,
+            project=self.warehouse_name,
             credentials=self.credentials
         )
