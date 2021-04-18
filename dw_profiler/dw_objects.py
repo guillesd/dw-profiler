@@ -1,4 +1,5 @@
 from dataclasses import dataclass 
+from typing import List
 
 @dataclass(frozen=True)
 class Column:
@@ -8,16 +9,16 @@ class Column:
 @dataclass(frozen=True)
 class Table:
     name: str 
-    columns: list[Column]
+    columns: List[Column]
     size: float 
     nrows: int 
 
 @dataclass(frozen=True)
 class Schema:
     name: str 
-    tables: list[Table]
+    tables: List[Table]
 
 @dataclass(frozen=True)
 class DataWarehouse:
     name: str 
-    schemas: list[Schema]
+    schemas: List[Schema]
