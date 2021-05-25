@@ -2,3 +2,5 @@
 /dist
 /build
 __pycache__/
+/local
+/dw_profiler.egg-info

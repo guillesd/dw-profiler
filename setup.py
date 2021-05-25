@@ -11,7 +11,8 @@ setup(
         'google-cloud-core>=1.3.0,<2',
         'google-cloud-bigquery>=1.25.0,<3',
         'google-api-core>=1.16.0,<2',
-        'googleapis-common-protos>=1.6.0,<2'
+        'googleapis-common-protos>=1.6.0,<2',
+        'google-auth >= 1.20.0'
     ],
     packages=find_packages(),
     python_requires=">=3.7.0",
